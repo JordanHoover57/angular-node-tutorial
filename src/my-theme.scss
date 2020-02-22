@@ -1,0 +1,14 @@
+//Gives us access to the mat classes and color palettes
+@import '~@angular/material/theming';
+
+//base stylings for the angular package
+@include mat-core();
+
+$my-theme-primary: mat-palette($mat-grey);
+//don't need to specify the hues angular can infer from the class
+$my-theme-accent: mat-palette($mat-blue);
+$my-theme-warn: mat-palette($mat-red);
+
+$my-theme: mat-light-theme($my-theme-primary,$my-theme-accent,$my-theme-warn);
+
+@include angular-material-theme($my-theme);
